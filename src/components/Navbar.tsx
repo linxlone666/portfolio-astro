@@ -16,7 +16,7 @@ export interface NavbarProps {
 const defaultLinks: NavLink[] = [
   { label: "Team", href: "#" },
   { label: "Nutthawat", href: "#" },
-  { label: "Thanaphoom", href: "#" },
+  { label: "Tanaphoom", href: "#" },
   { label: "Kasemsak", href: "#" },
 ];
 
@@ -30,7 +30,7 @@ export default function Navbar({
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <span className={styles.logoBox} aria-hidden="true" />
+        <a href="#" className={styles.logoBox} aria-hidden="true" />
         <span className={styles.logoText}>{logoText}</span>
       </div>
 
