@@ -1,16 +1,18 @@
 import "./Profile.css"
+
 interface ProfileProps {
     img_profile?: string;
     Name?: string;
     About_me?: string;
     img_experience?:string;
     About_experience?:string;
+    
 }
 
-export default function Profile_Nutthawat({
+export default function Profile_Team({
         // for image profile style you name & About for you
-        img_profile = "https://i.pinimg.com/736x/bd/33/14/bd33149f3226511fad6c6f7b9fd0799e.jpg" ,
-        Name = "Profile - Tanaphoom",
+        img_profile = "https://i.pinimg.com/736x/ff/b3/54/ffb354323b453e5979f6151e197237c1.jpg",
+        Name = "Profile - Team",
         About_me = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ducimus ipsum quasi quis, et dicta laboriosam aliquid ut libero, accusamus fuga sequi cum, amet a reprehenderit dolorem atque similique eum!",
 
         // for experience style & text About you experience
@@ -21,7 +23,7 @@ export default function Profile_Nutthawat({
     return(
         <div className="main_box">
             <div className="img_box">
-                    <img src={img_profile} alt="" />
+                    <img src={img_profile} alt={Name} />
                     </div>
                 <div className="is_me">
                     <h1>{Name}</h1>

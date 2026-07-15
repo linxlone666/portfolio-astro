@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Profile_Nutthawat from "./Profile_Nutthawat";
 import Profile_Tanaphoom from "./Profile_Tanaphoom";
 import Profile_Kasemsak from "./Profile_Kasemsak";
+import Profile_Team from "./Profile_Team";
 
 const links = [
   { label: "Team", href: "#team" },
@@ -16,6 +17,8 @@ export default function ProfileSwitcher() {
 
   const renderProfile = () => {
     switch (activeHref) {
+      case "#team":
+        return<Profile_Team/>;
       case "#nutthawat":
         return <Profile_Nutthawat />;
       case "#tanaphoom":
