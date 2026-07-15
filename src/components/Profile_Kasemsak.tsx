@@ -5,9 +5,10 @@ interface ProfileProps {
     About_me?: string;
     img_experience?:string;
     About_experience?:string;
+    video_xp?:string
 }
 
-export default function Profile_Nutthawat({
+export default function Profile_Kasemsak ({
         // for image profile style you name & About for you
         img_profile = "https://i.pinimg.com/736x/8f/eb/b7/8febb7aefda5693b9f42be4fb58f6fdd.jpg" ,
         Name = "Profile - Kasemsak",
@@ -16,6 +17,7 @@ export default function Profile_Nutthawat({
         // for experience style & text About you experience
         img_experience = "https://i.pinimg.com/1200x/90/d6/16/90d616365c29d7cad0949d26ee585060.jpg",
         About_experience = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat blanditiis, provident corporis est ratione consequuntur aliquid ipsa voluptatem officiis porro! Dolorem, necessitatibus. Necessitatibus repellendus in nihil accusantium harum a consequatur.",
+        video_xp = "https://www.youtube.com/embed/5zkNVTV8zCk?si=CWUPAYvv2kzGmxTt" 
         
     }:ProfileProps) {
     return(
@@ -29,7 +31,8 @@ export default function Profile_Nutthawat({
                 </div>
 
                 <div className="xp_box">
-                <img src={img_experience} alt="" />
+                {/* <img src={img_experience} alt="" /> */}
+                <iframe src={video_xp}></iframe>
                     </div>
                 <div className="xp_experience">
                     <h2>{About_experience}</h2>

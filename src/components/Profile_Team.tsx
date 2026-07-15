@@ -1,4 +1,7 @@
 import "./Profile.css"
+import icon from "../assets/Top_edge_team.jpg"
+import Icon_3D from "./Icon_3D";
+
 
 interface ProfileProps {
     img_profile?: string;
@@ -11,7 +14,7 @@ interface ProfileProps {
 
 export default function Profile_Team({
         // for image profile style you name & About for you
-        img_profile = "https://i.pinimg.com/736x/ff/b3/54/ffb354323b453e5979f6151e197237c1.jpg",
+        img_profile = icon.src,
         Name = "Profile - Team",
         About_me = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ducimus ipsum quasi quis, et dicta laboriosam aliquid ut libero, accusamus fuga sequi cum, amet a reprehenderit dolorem atque similique eum!",
 
@@ -31,7 +34,7 @@ export default function Profile_Team({
                 </div>
 
                 <div className="xp_box">
-                    <img src={img_experience} alt="" />
+                    <Icon_3D/>
                     </div>
                 <div className="xp_experience">
                     <h2>{About_experience}</h2>

@@ -7,7 +7,7 @@ interface ProfileProps {
     About_experience?:string;
 }
 
-export default function Profile_Nutthawat({
+export default function Profile_Tanaphoom({
         // for image profile style you name & About for you
         img_profile = "https://i.pinimg.com/736x/bd/33/14/bd33149f3226511fad6c6f7b9fd0799e.jpg" ,
         Name = "Profile - Tanaphoom",
