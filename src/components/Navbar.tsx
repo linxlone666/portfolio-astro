@@ -11,13 +11,14 @@ export interface NavbarProps {
   activeHref?: string;
   visitHref?: string;
   visitLabel?: string;
+  onNavigate?: (href: string) => void;
 }
 
 const defaultLinks: NavLink[] = [
-  { label: "Team", href: "#" },
-  { label: "Nutthawat", href: "#" },
-  { label: "Tanaphoom", href: "#" },
-  { label: "Kasemsak", href: "#" },
+  { label: "Team", href: "#team" },
+  { label: "Nutthawat", href: "#nutthawat" },
+  { label: "Tanaphoom", href: "#tanaphoom" },
+  { label: "Kasemsak", href: "#kasemsak" },
 ];
 
 export default function Navbar({
@@ -26,11 +27,20 @@ export default function Navbar({
   activeHref,
   visitHref = "https://github.com/linxlone666/portfolio-web-app",
   visitLabel = "Visit Github",
+  onNavigate,
 }: NavbarProps) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <a href="#" className={styles.logoBox} aria-hidden="true" />
+        <a
+          href="#team"
+          className={styles.logoBox}
+          aria-hidden="true"
+          onClick={(event) => {
+            event.preventDefault();
+            onNavigate?.("#team");
+          }}
+        />
         <span className={styles.logoText}>{logoText}</span>
       </div>
 
@@ -41,6 +51,10 @@ export default function Navbar({
               href={link.href}
               className={styles.link}
               aria-current={link.href === activeHref ? "page" : undefined}
+              onClick={(event) => {
+                event.preventDefault();
+                onNavigate?.(link.href);
+              }}
             >
               {link.label}
             </a>
